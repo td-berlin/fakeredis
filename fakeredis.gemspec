@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "fakeredis/version"
 
 Gem::Specification.new do |s|
-  s.name        = "fakeredis"
+  s.name        = "td-fakeredis"
   s.version     = FakeRedis::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Guillermo Iguaran"]
@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
   s.summary     = %q{Fake (In-memory) driver for redis-rb.}
   s.description = %q{Fake (In-memory) driver for redis-rb. Useful for testing environment and machines without Redis.}
+  
+  s.metadata['allowed_push_host'] = 'https://rubygems.td-asp.com'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
